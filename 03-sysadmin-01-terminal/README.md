@@ -132,20 +132,18 @@
     Ответ:
 ```shell
     
-     `{` и `}` являются зарезервированными словами 
      { list; }
               list is simply executed in the current shell environment.  list must be terminated with a newline or semicolon.  This is known as a group command.  The return status is the exit status
               of list.  Note that unlike the metacharacters ( and ), { and } are reserved words and must occur where a reserved word is permitted to be recognized.  Since they do not  cause  a  word
               break, they must be separated from list by whitespace or another shell metacharacter.
-
-     function name [()] compound-command [redirection]
-              This defines a function named name.  The reserved word function is optional.  If the function reserved word is supplied, the parentheses are optional.  The body of the function is  the
-              compound  command  compound-command  (see  Compound  Commands above).  That command is usually a list of commands between { and }, but may be any command listed under Compound Commands
-              above, with one exception: If the function reserved word is used, but the parentheses are not supplied, the braces are required.  compound-command is executed whenever name  is  speci‐
-              fied  as  the  name  of a simple command.  When in posix mode, name may not be the name of one of the POSIX special builtins.  Any redirections (see REDIRECTION below) specified when a
-              function is defined are performed when the function is executed.  The exit status of a function definition is zero unless a syntax error occurs or a readonly  function  with  the  same
-              name already exists.  When executed, the exit status of a function is the exit status of the last command executed in the body.  (See FUNCTIONS below.)
-```
+     { список; }         
+              список просто выполняется в текущей среде оболочки. Список должен заканчиваться новой 
+              строкой или точкой с запятой. Эта команда называется командой группы. Статус 
+              возврата - это статус выхода из списка. Следует отметить, что в отличие от 
+              метасимволов (и), {и} являются зарезервированными словами и должны использоваться там, 
+              где зарезервированное слово разрешено распознавать. Поскольку они не вызывают разрыва 
+              слов, их необходимо отделить от списка пробелом или другим метасимволом оболочки.
+     ```
 
 10. С учётом ответа на предыдущий вопрос, как создать однократным вызовом `touch` 100000 файлов? Получится ли аналогичным образом создать 300000? Если нет, то почему?
 
