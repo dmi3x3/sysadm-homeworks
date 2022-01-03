@@ -109,7 +109,8 @@ PID    COMM               FD ERR PATH
 
 6. Какой системный вызов использует uname -a? Приведите цитату из man по этому системному вызову, где описывается альтернативное местоположение в /proc, где можно узнать версию ядра и релиз ОС.
 
-Ответ:
+Ответ: Системный вызов uname()
+
 ```text
     uname() returns system information in the structure pointed to by buf.
 
